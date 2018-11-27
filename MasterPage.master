@@ -1,0 +1,175 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initia-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+	<title>KIDEg</title>
+	<meta name="description" content="Kinetronica hpagina de consulta"/>
+	<meta name="keywords" content="Circuitos,Componentes,Kinetronica,Cursos,Sucursales"/>
+	<meta name="author" content="Veronica Marlem Carrillo Rodríguez"/>
+	<link rel="stylesheet" href="css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="css/estilos.css"/>
+    <asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
+</head>
+<body>
+	<form id="form1" runat="server">
+	<!--MENU -->
+	<div class="container-fluid bg-dark">
+		<nav class="navbar navbar-expand-lg navbar-light bg-light navbar navbar-dark bg-dark container">
+          <img src="imagenes/KIDEG.jpg" style="height: 140px; width: 229px"/>
+		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		    <span class="navbar-toggler-icon"></span>
+		  </button>
+		
+		  <div class="collapse navbar-collapse" id="navbarSupportedContent"/>
+		    <div class="navbar-nav ml-auto "/>
+		      <a class="nav-item nav-link active" href="#">Inicio<span class="sr-only">(current)</span></a>
+		      <a class="nav-item nav-link" href="#">¿Quiénes somos?</a>
+		      <a class="nav-item nav-link mr-4" href="#">Misión y Visión</a>
+              <a class="nav-item nav-link mr-4" href="Default2.aspx"> <asp:Label ID="Label2" runat="server" Text="Mantenimiento de usuarios"></asp:Label></a>
+		      <a class="nav-item nav-link" href="#">Categoría de Juegos</a>
+                <a class="nav-item nav-link" href="acceso.aspx">
+                <asp:Label ID="Label1" runat="server"></asp:Label>
+                </a>
+		</nav>
+	</div>
+	<!--FIN MENU -->
+	<main role="main">
+	<!--SLIDER -->
+	<div id="myCarousel" class="carousel slide " data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1" class=""></li>
+          <li data-target="#myCarousel" data-slide-to="2" class=""></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class="first-slide" src="imagenes/slider4.png" alt="First slide"/>
+            <div class="container">
+              <div class="carousel-caption text-left">
+                <h1>HOLA</h1>
+                <p>BIENVENIDO A KIDEg</p>
+                <p><a class="btn btn-lg btn-primary" href="acceso.aspx" role="button">Iniciar sesión</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img class="second-slide" src="imagenes/slider2.jpg" alt="Second slide"/>
+            <div class="container">
+              <div class="carousel-caption">
+                <h1>¿Quieres aprender?</h1>
+                <p>Conócenos aquí</p>
+                <p><a class="btn btn-lg btn-success" href="#" role="button">Leer más</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img class="third-slide" src="imagenes/slider3.png" alt="Third slide"/>
+            <div class="container">
+              <div class="carousel-caption text-right">
+                <h1>Regístrate</h1>
+                <p>Da clic en el botón</p>
+                <p><a class="btn btn-lg btn-danger" href="#" role="button">Aquí</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+	<!--FIN SLIDER -->
+        <!--  ----------------------------------------CONTENT ----------------------------------------------------------------------------------- -->
+  <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+       
+    </asp:ContentPlaceHolder>
+<!--  ----------------------------------------------CONTENT --------------------------------------------------------------------- -->
+	<!--CARD -->
+	<div class="container-fluid">
+		<div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
+		  <div class="card-header">Novedades</div>
+		  <div class="card-body">
+		    <h5 class="card-title">Lo más nuevo en...</h5>
+		    <p class="card-text">Contenido</p>
+		  </div>
+		</div>
+		<div class="card text-white bg-success mb-3" style="max-width: 18rem;">
+		  <div class="card-header">Chistes</div>
+		  <div class="card-body">
+		    <h5 class="card-title">Para que sonrías un poco</h5>
+		    <p class="card-text">Contenido</p>
+		  </div>
+		</div>
+		<div class="card text-white bg-danger mb-3" style="max-width: 18rem;">
+		  <div class="card-header">Adivinanzas</div>
+		  <div class="card-body">
+		    <h5 class="card-title">Adivina adivinador</h5>
+		    <p class="card-text">Contenido</p>
+		  </div>
+		</div>
+		<div class="card text-white bg-warning mb-3" style="max-width: 18rem;">
+		  <div class="card-header">Cuentos</div>
+		  <div class="card-body">
+		    <h5 class="card-title">Cuenta cuentos</h5>
+		    <p class="card-text">Contenido</p>
+		  </div>
+		</div>
+		<div class="card text-white bg-info mb-3" style="max-width: 18rem;">
+		  <div class="card-header">Tecnología</div>
+		  <div class="card-body">
+		    <h5 class="card-title">¿Quieres estar al día?</h5>
+		    <p class="card-text">Contenido</p>
+		  </div>
+		</div>
+	</div>
+<!--FIN CARD -->
+  <div class="container marketing"/>
+
+        <!-- Three columns of text below the carousel -->
+        <div class="row">
+          <div class="col-lg-4">
+            <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140"/>
+            <h2>Contacto</h2>
+            <p>Tel. 771 238 2109</p>
+            <p>Tel. 773 734 1847</p>
+            <p>Tel. 772 161 9269</p>
+            <p><a class="btn btn-secondary" href="#" role="button">Ver detalles »</a></p>
+          </div><!-- /.col-lg-4 -->
+          <div class="col-lg-4">
+            <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140"/>
+            <h2>Blog</h2>
+            <p><a href="https://www.kideg.com">www.kideg.com</a></p> 
+            <br/>
+            <br/>
+            <br/>
+            <p><a class="btn btn-secondary" href="#" role="button">Ver detalles »</a></p>
+          </div><!-- /.col-lg-4 -->
+          <div class="col-lg-4">
+            <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140"/>
+            <h2>Redes sociales</h2>
+            <p><a href="https://www.facebook.com/KIDEg-244772739570255">FACEBOOK - KIDEG</a></p>  
+            <p><a href="https://www.twitter.com/Kide__g">TWITTER - @kideg</a></p> 
+            <p><a href="https://www.instagram.com/kide_g">INSTAGRAM - @kideg</a></p> 
+            <p><a class="btn btn-secondary" href="#" role="button">Ver detalles »</a></p>
+          </div><!-- /.col-lg-4 -->
+        </div><!-- /.row -->
+
+<!-- FOOTER -->
+      <footer class="container">
+        <p class="float-right"><a href="#">Inicio</a></p>
+        <p>© 2018-2020 KIDEg, Inc. · <a href="#">Privacidad</a> · <a href="#">Términos y Condiciones</a></p>
+      </footer>
+	</main>
+
+	<script src="js/jquery.js" type="text/javascript"></script>
+	<script src="js/bootstrap.min.js" type="text/javascript"></script>
+    </form>
+</body>
+</html>

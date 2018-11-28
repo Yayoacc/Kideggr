@@ -57,17 +57,17 @@
           
           <div class="top-row">
             <div class="field-wrap">
-              <input id="Text1" type="text" placeholder="Nombre" required="required"/>
+              <input id="Text1" type="text" placeholder="Nombre" required="required" runat="server"/>
             </div>
         
             <div class="field-wrap">
               <label>
               </label>
-              <input id="Text2" type="text" placeholder=" Apellido Paterno" required="required"/>
+              <input id="Text2" type="text" placeholder=" Apellido Paterno" required="required" runat="server"/>
             </div>
           </div>
             <div class="field-wrap">
-               <input id="Text3" type="text" placeholder="Apellido Materno" required="required"/>
+               <input id="Text3" type="text" placeholder="Apellido Materno" required="required" runat="server"/>
             </div>
         <div class="field-wrap" style="font-family: Arial, Helvetica, sans-serif; font-size: x-small; color: #666666">
              <label style="z-index: 2; position:relative; padding-right: 500px; margin:0px; text-decoration:none; font-size: small;">Edad:</label>
@@ -89,7 +89,7 @@
           </div>
           
           <div class="field-wrap">
-            <input type="password"required="required" placeholder="Contraseña" id="psw"/>
+            <input id="Text5" type="password" required="required" placeholder="Contraseña" runat="server"/>
           </div>
               <asp:Button ID="Button1" runat="server" Text="Registrarme" BackColor="#0066FF" ForeColor="White" CssClass="buttonR" OnClick="Button1_Click"/>
           
@@ -127,6 +127,5 @@
       </div><!-- tab-content -->
       
 </div> <!-- /form -->
-    </div>
 </asp:Content>
 

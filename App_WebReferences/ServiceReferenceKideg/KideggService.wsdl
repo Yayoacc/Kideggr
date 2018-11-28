@@ -55,6 +55,8 @@
             <s:element minOccurs="0" maxOccurs="1" name="apellidomaterno" type="s:string" />
             <s:element minOccurs="0" maxOccurs="1" name="edad" type="s:string" />
             <s:element minOccurs="0" maxOccurs="1" name="genero" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="usr" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="p" type="s:int" />
           </s:sequence>
         </s:complexType>
       </s:element>
@@ -106,11 +108,6 @@
           <s:sequence>
             <s:element minOccurs="0" maxOccurs="1" name="dsNiñosResult">
               <s:complexType>
-                <s:annotation>
-                  <s:appinfo>
-                    <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
-                  </s:appinfo>
-                </s:annotation>
                 <s:sequence>
                   <s:element ref="s:schema" />
                   <s:any />
@@ -131,7 +128,23 @@
       <s:element name="insertarPuntajeResponse">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="1" maxOccurs="1" name="insertarPuntajeResult" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="insertarPuntajeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertarUsuario">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pw" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="r" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertarUsuarioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="insertarUsuarioResult" type="s:string" />
           </s:sequence>
         </s:complexType>
       </s:element>
@@ -185,6 +198,12 @@
   <wsdl:message name="insertarPuntajeSoapOut">
     <wsdl:part name="parameters" element="tns:insertarPuntajeResponse" />
   </wsdl:message>
+  <wsdl:message name="insertarUsuarioSoapIn">
+    <wsdl:part name="parameters" element="tns:insertarUsuario" />
+  </wsdl:message>
+  <wsdl:message name="insertarUsuarioSoapOut">
+    <wsdl:part name="parameters" element="tns:insertarUsuarioResponse" />
+  </wsdl:message>
   <wsdl:portType name="KideggServiceSoap">
     <wsdl:operation name="HelloWorld">
       <wsdl:input message="tns:HelloWorldSoapIn" />
@@ -217,6 +236,10 @@
     <wsdl:operation name="insertarPuntaje">
       <wsdl:input message="tns:insertarPuntajeSoapIn" />
       <wsdl:output message="tns:insertarPuntajeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="insertarUsuario">
+      <wsdl:input message="tns:insertarUsuarioSoapIn" />
+      <wsdl:output message="tns:insertarUsuarioSoapOut" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="KideggServiceSoap" type="tns:KideggServiceSoap">
@@ -293,6 +316,15 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="insertarUsuario">
+      <soap:operation soapAction="http://tempuri.org/insertarUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
   </wsdl:binding>
   <wsdl:binding name="KideggServiceSoap12" type="tns:KideggServiceSoap">
     <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
@@ -361,6 +393,15 @@
     </wsdl:operation>
     <wsdl:operation name="insertarPuntaje">
       <soap12:operation soapAction="http://tempuri.org/insertarPuntaje" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertarUsuario">
+      <soap12:operation soapAction="http://tempuri.org/insertarUsuario" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

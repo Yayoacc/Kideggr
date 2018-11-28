@@ -89,7 +89,7 @@
           </div>
           
           <div class="field-wrap">
-            <input type="password"required="required" placeholder="Contraseña"/>
+            <input type="password"required="required" placeholder="Contraseña" id="psw"/>
           </div>
               <asp:Button ID="Button1" runat="server" Text="Registrarme" BackColor="#0066FF" ForeColor="White" CssClass="buttonR" OnClick="Button1_Click"/>
           

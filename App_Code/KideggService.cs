@@ -87,10 +87,10 @@ public class KideggService : System.Web.Services.WebService {
         return f;
     }
     [WebMethod]
-    public int insertar(String nombre, String apellidopaterno, String apellidomaterno, String edad, String genero)
+    public int insertar(String nombre, String apellidopaterno, String apellidomaterno, String edad, String genero, String usr, int p )
     {
 
-        string sql = "insert into niño (niñ_nombre, niñ_apellido_paterno, niñ_apellido_materno, niñ_edad, nin_genero) values ('" + nombre + "','" + apellidopaterno + "','" + apellidomaterno + "','" + edad + "','" + genero + "')";
+        string sql = "insert into niño (niñ_nombre, niñ_apellido_paterno, niñ_apellido_materno, niñ_edad, nin_genero, usu_cve_usuario, pun_cve_puntaje) values ('" + nombre + "','" + apellidopaterno + "','" + apellidomaterno + "','" + edad + "','" + genero + "', '"+usr+"', "+p+")";
         string Cc = "Data Source=HP-BEATS\\SQLEXPRESS; Initial Catalog=KIDEG; User Id=sa; Password=Thekingof02;";
         SqlConnection   cadenaconn = new SqlConnection(Cc);
         SqlCommand cmd = new SqlCommand();
@@ -147,19 +147,35 @@ public class KideggService : System.Web.Services.WebService {
         return ds;
     }
     [WebMethod]
-    public int insertarPuntaje(int b, int c)
+    public String insertarPuntaje(int b, int c)
     {
-        string sql = "insert into puntaje (PUN_RANKING, JUE_CVE_JUEGO) values (" + b + ", " + c + ")";
-        string Cc = "Data Source=HP-BEATS\\SQLEXPRESS; Initial Catalog=KIDEG; User Id=sa; Password=Thekingof02;";
-        SqlConnection cadenaconn = new SqlConnection(Cc);
-        SqlCommand cmd = new SqlCommand();
-        cmd.Connection = cadenaconn;
-        cmd.CommandText = sql;
-        cmd.CommandType = CommandType.Text;
-        cadenaconn.Open();
-        int resultado = cmd.ExecuteNonQuery();
-        cadenaconn.Close();
-        return resultado;
+        String g = string.Empty;
+        String sql = "insert into puntaje (PUN_RANKING, JUE_CVE_JUEGO) values (" + b + ", " + c + "); SELECT SCOPE_IDENTITY();";
+        using (var Cc = new SqlConnection("Data Source=HP-BEATS\\SQLEXPRESS; Initial Catalog=KIDEG; User Id=sa; Password=Thekingof02"))
+        {
+            using (var cmd = new SqlCommand(sql, Cc))
+            {
+                Cc.Open();
+                g = cmd.ExecuteScalar().ToString();
+                Cc.Close();
+            }
+        }
+        return g;
     }
-    
+    [WebMethod]
+    public String insertarUsuario(String id, String pw, int r)
+    {
+        String g = string.Empty;
+        String sql = "insert into usuario(USU_CVE_USUARIO, USU_CONTRASEÑA, ROL_CVE_ROL) values ('"+id+"', '"+pw+"', "+r+"); SELECT SCOPE_IDENTITY();";
+        using (var Cc = new SqlConnection("Data Source=HP-BEATS\\SQLEXPRESS; Initial Catalog=KIDEG; User Id=sa; Password=Thekingof02"))
+        {
+            using (var cmd = new SqlCommand(sql, Cc))
+            {
+                Cc.Open();
+                g = cmd.ExecuteScalar().ToString();
+                Cc.Close();
+            }
+        }
+        return id;
+    }
 }

@@ -48,9 +48,10 @@
             $(target).fadeIn(600);
 
         });</script>
-    <div class="form"> 
+        <div id="Div1"  style="float:right; margin-right:300px; padding-bottom:500px">   
+    <div class="form" > 
       <div class="tab-content">
-        <div id="signup">   
+        <div id="signup" >   
           <h1>Registrate Gratis</h1>
           
           <form action="/" method="post">
@@ -125,7 +126,7 @@
         </div>
         
       </div><!-- tab-content -->
-      
+      </div>
 </div> <!-- /form -->
 </asp:Content>
 

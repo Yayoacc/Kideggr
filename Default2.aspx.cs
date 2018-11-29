@@ -85,10 +85,10 @@ public partial class Default2 : System.Web.UI.Page
     {
         //clsBD inserter = new clsBD(Application["KidegDB"].ToString());
         ServiceReferenceKideg.KideggServiceSoapClient ws = new ServiceReferenceKideg.KideggServiceSoapClient();
-        if (ws.insertar(TextBox2.Text.ToString(), TextBox3.Text.ToString(), TextBox4.Text.ToString(), TextBox5.Text.ToString(), TextBox7.Text.ToString()) == 1)
+        if (ws.insertar(TextBox2.Text.ToString(), TextBox3.Text.ToString(), TextBox4.Text.ToString(), TextBox5.Text.ToString(), TextBox7.Text.ToString(), "YAEL", 2) == 1)
         //if (inserter.insertar(TextBox2.Text.ToString(), TextBox3.Text.ToString(), TextBox4.Text.ToString(), TextBox5.Text.ToString(), TextBox7.Text.ToString()) == 1)
         {
-            Response.Write("<script language='javascript'>alert('Registro de Empleado exitoso.');</script>");
+            Response.Write("<script language='javascript'>alert('Registro de Usuario exitoso.');</script>");
             Response.Write("<script language='javascript'>document.location.href='Default2.aspx'</script>");
         }
         else

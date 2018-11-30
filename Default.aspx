@@ -10,9 +10,6 @@
       <div class="tab-content">
         <div id="signup" >   
           <h1>Registrate Gratis</h1>
-          
-          <form action="/" method="post">
-          
           <div class="top-row">
             <div class="field-wrap">
               <input id="Text1" type="text" placeholder="Nombre" required="required" runat="server"/>
@@ -49,37 +46,10 @@
           <div class="field-wrap">
             <input id="Text5" type="password" required="required" placeholder="Contraseña" runat="server"/>
           </div>
-              <asp:Button ID="Button1" runat="server" Text="Registrarme" BackColor="#0066FF" ForeColor="White" CssClass="buttonR" OnClick="Button1_Click"/>
-          
-          </form>
-
+              <asp:Button ID="Button1" runat="server" Text="Registrarme" BackColor="#0066FF" ForeColor="White" CssClass="buttonR" OnClick="Button1_Click" />
         </div>
         
         <div id="login">   
-          <h1>Welcome Back!</h1>
-          
-          <form action="/" method="post">
-          
-            <div class="field-wrap">
-            <label>
-              Email Address<span class="req">*</span>
-            </label>
-            <input type="email" autocomplete="off"/>
-          </div>
-          
-          <div class="field-wrap">
-            <label>
-              Password<span class="req">*</span>
-            </label>
-            <input type="password" autocomplete="off"/>
-          </div>
-          
-          <p class="forgot"><a href="#">Forgot Password?</a></p>
-          
-          <button class="button button-block"/>Log In</button>
-          
-          </forms>
-
         </div>
         
       </div><!-- tab-content -->

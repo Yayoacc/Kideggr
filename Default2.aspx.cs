@@ -31,7 +31,7 @@ public partial class Default2 : System.Web.UI.Page
                 // CONSULTAR TABLA NIÑO FILTRANDO POR
                 // LA CLAVE DEL NIÑO 
                 string cadSql = "";
-                cadSql = cadSql + " SELECT NIN_NOMBRE, NIÑ_APELLIDO_PATERNO, NIÑ_APELLIDO_MATERNO, NIÑ_CVE_NIÑO, NIÑ_EDAD, NIN_GENERO ";
+                cadSql = cadSql + " SELECT NIÑ_NOMBRE, NIÑ_APELLIDO_PATERNO, NIÑ_APELLIDO_MATERNO, NIÑ_CVE_NIÑO, NIÑ_EDAD, NIN_GENERO, USU_CVE_USUARIO";
                 cadSql = cadSql + " FROM NIÑO ";
                 cadSql = cadSql + " WHERE NIÑ_CVE_NIÑO =" + Request["emp"].ToString();
 
@@ -50,7 +50,7 @@ public partial class Default2 : System.Web.UI.Page
                 TextBox4.Value = dr.GetValue(3).ToString();
                 edad.Value = dr.GetValue(4).ToString();
                 country.Value = dr.GetValue(5).ToString();
-                //TextBox5.Text = dr.GetValue(4).ToString();
+                TextBox5.Value = dr.GetValue(6).ToString();
                 //TextBox6.Text = dr.GetValue(5).ToString();
                 //TextBox7.Text = dr.GetValue(5).ToString();
                 cnnEmp.Close();
@@ -145,8 +145,13 @@ public partial class Default2 : System.Web.UI.Page
         TextBox3.Value = "";
         TextBox4.Value = "";
         TextBox5.Value = "";
+        TextBox6.Value = "";
     }
     protected void ImageButton5_Click(object sender, ImageClickEventArgs e)
+    {
+
+    }
+    protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
     {
 
     }

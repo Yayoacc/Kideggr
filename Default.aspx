@@ -5,7 +5,7 @@
 
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-        <div id="Div1"  style="float:right; margin-right:300px; padding-bottom:500px">   
+        <div id="Div1"  style="float:right; margin-right:200px;">   
     <div class="form" > 
       <div class="tab-content">
         <div id="signup" >   

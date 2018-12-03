@@ -125,10 +125,10 @@
               </div>
               <br /><br />
               <div class="mb-3">
-                <asp:GridView ID="GridView1" runat="server" Width="602px" AllowPaging="True" PageSize="5" AutoGenerateColumns="False">
+                <asp:GridView ID="GridView1" runat="server" Width="602px" AllowPaging="True" PageSize="5" AutoGenerateColumns="False" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
                     <AlternatingRowStyle Font-Names="Arial Rounded MT Bold" Font-Size="Small" />
                     <Columns>
-                        <asp:HyperLinkField DataNavigateUrlFields="niñ_cve_niño" DataNavigateUrlFormatString="Default.aspx?op=1&amp;emp={0}" DataTextField="niñ_cve_niño" HeaderText="Clave" />
+                        <asp:HyperLinkField DataNavigateUrlFields="niñ_cve_niño" DataNavigateUrlFormatString="Default2.aspx?op=1&amp;emp={0}" DataTextField="niñ_cve_niño" HeaderText="Clave" />
                         <asp:BoundField DataField="niñ_nombre" HeaderText="Nombre" />
                         <asp:BoundField DataField="niñ_apellido_paterno" HeaderText="Apellido Paterno" />
                         <asp:BoundField DataField="niñ_apellido_materno" HeaderText="Apellido Materno" />

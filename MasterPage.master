@@ -116,7 +116,7 @@
 		  <div class="card-header">Adivinanzas</div>
 		  <div class="card-body">
 		    <h5 class="card-title">Parecen persianas, que suben y bajan. ¿Qué son? <br /> -Las pestañas</h5>
-		    <a class="nav-item nav-link text-white" href="adivinanzas.aspx"><p class="text-white">Ver más</p></a>
+		    <a class="nav-item nav-link text-white" href="AdivinanzasA.aspx"><p class="text-white">Ver más</p></a>
 		  </div>
 		</div>
 		<div class="card text-white bg-warning mb-3" style="max-width: 18rem;">
@@ -184,7 +184,7 @@
             </font>
           </div>
         </div>
-      <p class="float-right"><a href="Default.aspx">Inicio</a></p>
+      <p class="float-right"><a href="Adivinanzas.aspx">Inicio</a></p>
       </footer>
       <!-- -------------------------------------------FIN FOOTER ....................--------------------------------------- -->
 	</main>

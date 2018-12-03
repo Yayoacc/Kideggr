@@ -178,4 +178,14 @@ public class KideggService : System.Web.Services.WebService {
         }
         return id;
     }
+    [WebMethod]
+    public DataSet dsJuego()
+    {
+        string Cc = "Data Source=HP-BEATS\\SQLEXPRESS; Initial Catalog=KIDEG; User Id=sa; Password=Thekingof02;";
+        String strSQL = "select j.JUE_CVE_JUEGO, j.JUE_RANGO_EDAD, j.JUE_IMAGEN, j.JUE_TITULO, j.JUE_ALMACENAMIETO, c.CAT_CVE_CATEGORIA, c.CAT_DESCRIPCION, t.TEM_CVE_TEMATICA, t.TEM_DESCRIPCION, v.VAL_CVE_VALORACION, v.VAL_NUMERO_ESTRELLAS from juego j, categoria c, TEMATICA t, VALORACION v, VALORACIONJUEGO vj where j.CAT_CVE_CATEGORIA = c.CAT_CVE_CATEGORIA and j.TEM_CVE_TEMATICA = t.TEM_CVE_TEMATICA and v.VAL_CVE_VALORACION = vj.VAL_CVE_VALORACION and vj.JUE_CVE_JUEGO = j.JUE_CVE_JUEGO";
+        SqlDataAdapter da = new SqlDataAdapter(strSQL, Cc);
+        DataSet ds = new DataSet();
+        da.Fill(ds, "JUEGO");
+        return ds;
+    }
 }

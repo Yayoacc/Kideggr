@@ -28,7 +28,7 @@
 		      <a class="nav-item nav-link active" href="#">Inicio<span class="sr-only">(current)</span></a>
 		      <a class="nav-item nav-link" href="#">¿Quiénes somos?</a>
 		      <a class="nav-item nav-link mr-4" href="#">Misión y Visión</a>
-              <a class="nav-item nav-link mr-4" href="Default2.aspx"> <asp:Label ID="Label2" runat="server" Text="Mantenimiento de usuarios"></asp:Label></a>
+              <div id="man" runat="server"><a class="nav-item nav-link mr-4" href="Default2.aspx"> <asp:Label ID="Label2" runat="server" Text="Mantenimiento de usuarios"></asp:Label></a></div>
 		      <a class="nav-item nav-link" href="#">Categoría de Juegos</a>
                 <a class="nav-item nav-link" href="acceso.aspx">
                 <asp:Label ID="Label1" runat="server"></asp:Label>

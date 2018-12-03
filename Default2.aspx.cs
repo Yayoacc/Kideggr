@@ -31,7 +31,7 @@ public partial class Default2 : System.Web.UI.Page
                 // CONSULTAR TABLA NIÑO FILTRANDO POR
                 // LA CLAVE DEL NIÑO 
                 string cadSql = "";
-                cadSql = cadSql + " SELECT NIÑ_CVE_NIÑO, NIN_NOMBRE, NIÑ_APELLIDO_PATERNO, NIÑ_APELLIDO_MATERNO, NIÑ_EDAD, NIN_GENERO ";
+                cadSql = cadSql + " SELECT NIN_NOMBRE, NIÑ_APELLIDO_PATERNO, NIÑ_APELLIDO_MATERNO, NIÑ_CVE_NIÑO, NIÑ_EDAD, NIN_GENERO ";
                 cadSql = cadSql + " FROM NIÑO ";
                 cadSql = cadSql + " WHERE NIÑ_CVE_NIÑO =" + Request["emp"].ToString();
 
@@ -44,12 +44,15 @@ public partial class Default2 : System.Web.UI.Page
                 SqlDataReader dr = cmd.ExecuteReader();
                 dr.Read();
                 // VACIAR DATOS DEL dr A LOS TEXTBOXES... 
-                TextBox1.Text = dr.GetValue(0).ToString();
-                TextBox2.Text = dr.GetValue(1).ToString();
-                TextBox3.Text = dr.GetValue(2).ToString();
-                TextBox4.Text = dr.GetValue(3).ToString();
-                TextBox5.Text = dr.GetValue(4).ToString();
-                TextBox7.Text = dr.GetValue(5).ToString();
+                TextBox1.Value = dr.GetValue(0).ToString();
+                TextBox2.Value = dr.GetValue(1).ToString();
+                TextBox3.Value = dr.GetValue(2).ToString();
+                TextBox4.Value = dr.GetValue(3).ToString();
+                edad.Value = dr.GetValue(4).ToString();
+                country.Value = dr.GetValue(5).ToString();
+                //TextBox5.Text = dr.GetValue(4).ToString();
+                //TextBox6.Text = dr.GetValue(5).ToString();
+                //TextBox7.Text = dr.GetValue(5).ToString();
                 cnnEmp.Close();
             }
         }
@@ -85,24 +88,24 @@ public partial class Default2 : System.Web.UI.Page
     {
         //clsBD inserter = new clsBD(Application["KidegDB"].ToString());
         ServiceReferenceKideg.KideggServiceSoapClient ws = new ServiceReferenceKideg.KideggServiceSoapClient();
-        if (ws.insertar(TextBox2.Text.ToString(), TextBox3.Text.ToString(), TextBox4.Text.ToString(), TextBox5.Text.ToString(), TextBox7.Text.ToString(), "YAEL", 2) == 1)
-        //if (inserter.insertar(TextBox2.Text.ToString(), TextBox3.Text.ToString(), TextBox4.Text.ToString(), TextBox5.Text.ToString(), TextBox7.Text.ToString()) == 1)
+        String p = ws.insertarPuntaje(0, 1);
+        String usr = ws.insertarUsuario(TextBox5.Value.ToString(), TextBox6.Value.ToString(), 2);
+        if (ws.insertar(TextBox1.Value.ToString(), TextBox2.Value.ToString(), TextBox3.Value.ToString(), edad.Value.ToString(), country.Value.ToString(), usr, Convert.ToInt32(p)) == 1)
         {
-            Response.Write("<script language='javascript'>alert('Registro de Usuario exitoso.');</script>");
-            Response.Write("<script language='javascript'>document.location.href='Default2.aspx'</script>");
+            Response.Write("<script language='javascript'>alert('Registro exitoso, por favor inicie sesión');</script>");
+            Response.Write("<script language='javascript'>document.location.href='acceso.aspx'</script>");
         }
         else
         {
-            Response.Write("<script language='javascript'>alert('Error de registro');</script>");
+            Response.Write("<script language='javascript'>alert('Registro fallido, por favor verifique');</script>");
         }
-
     }
 
     protected void ImageButton2_Click(object sender, ImageClickEventArgs e)
     {
         ServiceReferenceKideg.KideggServiceSoapClient ws = new ServiceReferenceKideg.KideggServiceSoapClient();
         //clsBD deleter = new clsBD(Application["KidegDB"].ToString());
-        if (ws.eliminar(TextBox1.Text.ToString()) == 1)
+        if (ws.eliminar(TextBox4.Value.ToString()) == 1)
         //if (deleter.eliminar(TextBox1.Text.ToString()) == 1)
         {
             Response.Write("<script language='javascript'>alert('Registro eliminado exitosamente');</script>");
@@ -119,7 +122,7 @@ public partial class Default2 : System.Web.UI.Page
     {
         ServiceReferenceKideg.KideggServiceSoapClient ws = new ServiceReferenceKideg.KideggServiceSoapClient();
         //clsBD updater = new clsBD(Application["KidegDB"].ToString());
-        if (ws.actualizar(TextBox1.Text.ToString(), TextBox2.Text.ToString(), TextBox3.Text.ToString(), TextBox4.Text.ToString(), TextBox5.Text.ToString(), TextBox7.Text.ToString()) == 1)
+        if (ws.actualizar(TextBox4.Value.ToString(), TextBox1.Value.ToString(), TextBox2.Value.ToString(), TextBox3.Value.ToString(), edad.Value.ToString(), country.Value.ToString()) == 1)
         //if (updater.actualizar(TextBox1.Text.ToString(), TextBox2.Text.ToString(), TextBox3.Text.ToString(), TextBox4.Text.ToString(), TextBox5.Text.ToString(), TextBox7.Text.ToString()) == 1)
         {
             Response.Write("<script language='javascript'>alert('Registro actualizado exitosamente');</script>");
@@ -137,12 +140,11 @@ public partial class Default2 : System.Web.UI.Page
     }
     protected void ImageButton4_Click(object sender, ImageClickEventArgs e)
     {
-        TextBox1.Text = "";
-        TextBox2.Text = "";
-        TextBox3.Text = "";
-        TextBox4.Text = "";
-        TextBox5.Text = "";
-        TextBox7.Text = "";
+        TextBox1.Value = "";
+        TextBox2.Value = "";
+        TextBox3.Value = "";
+        TextBox4.Value = "";
+        TextBox5.Value = "";
     }
     protected void ImageButton5_Click(object sender, ImageClickEventArgs e)
     {

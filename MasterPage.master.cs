@@ -19,7 +19,12 @@ public partial class MasterPage : System.Web.UI.MasterPage
 
         if (Session["Rol"].ToString().Equals("JUGADOR") || Session["Rol"].ToString().Equals(""))
         {
-            Label2.Text = "";
+            Label2.Visible = false;
+            Label2.Attributes["Enabled"] = "false";
+        }
+        else {
+            Label2.Visible = true;
+            Label2.Attributes["Enabled"] = "true";
         }
     }
 }

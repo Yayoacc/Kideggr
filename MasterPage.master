@@ -22,14 +22,57 @@
 		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 		    <span class="navbar-toggler-icon"></span>
 		  </button>
-		
+		<style>
+ 
+.dropbtn {
+    background-color: #343a40;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+}
+ 
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+ 
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: black;
+    text-decoration-color:white;
+    min-width: 200px;
+    z-index: 1;
+}
+ 
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    padding-left: 12px
+}
+ 
+.dropdown-content a:hover {background-color:#343a40;}
+.dropdown:hover .dropdown-content {display: block;}
+ </style>
 		  <div class="collapse navbar-collapse" id="navbarSupportedContent"/>
 		    <div class="navbar-nav ml-auto "/>
 		      <a class="nav-item nav-link active" href="inicio.aspx">Inicio<span class="sr-only">(current)</span></a>
 		      <a class="nav-item nav-link" href="quienessomos.aspx">¿Quiénes somos?</a>
 		      <a class="nav-item nav-link mr-4" href="mision.aspx">Misión y Visión</a>
               <div id="man" runat="server"><a class="nav-item nav-link mr-4" href="Default2.aspx"> <asp:Label ID="Label2" runat="server" Text="Mantenimiento de usuarios"></asp:Label></a></div>
-		      <a class="nav-item nav-link" href="#">Categoría de Juegos</a>
+              <div class="dropdown">
+                <button class="dropbtn">Categorías de Juegos</button>
+                    <div class="dropdown-content">
+                            <a href="Adivinanzas.aspx" class="nav-item nav-link">Adivinanzas</a>
+                             <a href="Matematicas.aspx" class="nav-item nav-link">Matemáticas</a>
+                             <a href="Español.aspx" class="nav-item nav-link">Español</a>
+                             <a href="Puzzle.aspx" class="nav-item nav-link">Puzzle</a>
+                             <a href="Biologia.aspx" class="nav-item nav-link">Biología</a>
+                        </div>
+                        </div>
                 <a class="nav-item nav-link" href="acceso.aspx">
                 <asp:Label ID="Label1" runat="server"></asp:Label>
                 </a>

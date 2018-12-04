@@ -25,7 +25,7 @@ public partial class Default3 : System.Web.UI.Page
         }
         int counter = 0;
         for(int h = 0; h<25; h++){
-            if (a.Tables[0].Rows[h][6].ToString() == "ADIVINANZAS") {
+            if (a.Tables[0].Rows[h][6].ToString() == "ESPAÑOL") {
                 counter ++;
                 tb.Rows.Add(a.Tables[0].Rows[h][0].ToString(), a.Tables[0].Rows[h][1].ToString(), a.Tables[0].Rows[h][2].ToString(), a.Tables[0].Rows[h][3].ToString(), a.Tables[0].Rows[h][4].ToString(), a.Tables[0].Rows[h][5].ToString(), a.Tables[0].Rows[h][6].ToString(), a.Tables[0].Rows[h][7].ToString(), a.Tables[0].Rows[h][8].ToString(), a.Tables[0].Rows[h][9].ToString(), a.Tables[0].Rows[h][10].ToString());
             }

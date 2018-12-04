@@ -61,7 +61,6 @@
 		    <div class="navbar-nav ml-auto "/>
 		      <a class="nav-item nav-link active" href="inicio.aspx">Inicio<span class="sr-only">(current)</span></a>
 		      <a class="nav-item nav-link" href="quienessomos.aspx">¿Quiénes somos?</a>
-		      <a class="nav-item nav-link mr-4" href="mision.aspx">Misión y Visión</a>
               <div id="man" runat="server"><a class="nav-item nav-link mr-4" href="Default2.aspx"> <asp:Label ID="Label2" runat="server" Text="Mantenimiento de usuarios"></asp:Label></a></div>
               <div class="dropdown">
                 <button class="dropbtn">Categorías de Juegos</button>
@@ -92,30 +91,19 @@
             <img class="first-slide" src="imagenes/slider4.png" alt="First slide"/>
             <div class="container">
               <div class="carousel-caption text-left">
-                <h1>HOLA</h1>
                 <p>BIENVENIDO A KIDEg</p>
-                <p><a class="btn btn-lg btn-primary" href="acceso.aspx" role="button">Iniciar sesión</a></p>
               </div>
             </div>
           </div>
           <div class="carousel-item">
             <img class="second-slide" src="imagenes/slider2.jpg" alt="Second slide"/>
             <div class="container">
-              <div class="carousel-caption">
-                <h1>¿Quieres aprender?</h1>
-                <p>Conócenos aquí</p>
-                <p><a class="btn btn-lg btn-success" href="#" role="button">Leer más</a></p>
-              </div>
+      
             </div>
           </div>
           <div class="carousel-item">
             <img class="third-slide" src="imagenes/slider3.png" alt="Third slide"/>
             <div class="container">
-              <div class="carousel-caption text-right">
-                <h1>Regístrate</h1>
-                <p>Da clic en el botón</p>
-                <p><a class="btn btn-lg btn-danger" href="Default.aspx" role="button">Aquí</a></p>
-              </div>
             </div>
           </div>
         </div>
@@ -171,13 +159,8 @@
 		    <a class="nav-item nav-link text-white" href="cuentos.aspx"><p class="text-white">Ver más</p></a>
 		  </div>
 		</div>
-		<div class="card text-white bg-info mb-3" style="max-width: 18rem;">
-		  <div class="card-header">Tecnología</div>
-		  <div class="card-body">
-		    <h5 class="card-title">¿Quieres estar al día?</h5>
-		    <p class="card-text">Contenido</p>
-		  </div>
-		</div>
+        <br /><br /><br /><br />
+
 	</div>
 <!--FIN CARD -->
  <div class="container marketing"/>
@@ -227,7 +210,7 @@
             </font>
           </div>
         </div>
-      <p class="float-right"><a href="Adivinanzas.aspx">Inicio</a></p>
+      <p class="float-right"><a href="inicio.aspx">Inicio</a></p>
       </footer>
       <!-- -------------------------------------------FIN FOOTER ....................--------------------------------------- -->
 	</main>

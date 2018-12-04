@@ -9,7 +9,8 @@
     <link rel="stylesheet" type="text/css" href="css/categories_responsive.css"/>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-    <div class="product_grid" style="float:right; padding-left: 500px; z-index:100">
+    <div class="container float-right" style="width:700px">
+    <div class="product_grid" style="z-index:100;">
 
 						<!-- Product -->
 						<div class="product" id="p1" runat="server">
@@ -273,7 +274,7 @@
 								</div>
 							</div>
 						</div>
-
+        </div>
 					</div>
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap4/popper.js"></script>

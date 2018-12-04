@@ -3,26 +3,25 @@
 <%-- Add content controls here --%>
 <asp:Content ID="Content2" ContentPlaceHolderID="head" runat="server"></asp:Content>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="login-page" style="float:right; margin-right:400px">
-          <div class="form">
-            <form class="login-form">
-                <label class="sr-only" for="inlineFormInputGroupUsername">Usuario</label>
-              <div class="input-group">
-                <asp:Label ID="Label1" runat="server" Text="Usuario:"></asp:Label>
-                <asp:TextBox ID="TextBox1" runat="server" CssClass="input-group"></asp:TextBox>
-              </div>
+
+    <body class="text-center">
+        <div class="container float-right" style="border-radius:10px 10px; margin-top:100px; margin-right:350px; width:400px; box-shadow:3px 3px 25px 1px rgba(0,0,0,0.75);">
+            <form class="form-signin" style="width:700px; padding:200px;">
+     <br /><br />
+              <h1 class="h3 mb-3 font-weight-normal">Iniciar sesión</h1>
+            <br /><br />
+              <asp:Label id="Label1" runat="server" for="TextBox1" class="sr-only">Usuario</asp:Label>
+              <asp:TextBox  type="text" id="TextBox1" runat="server" class="form-control" placeholder="Usuario" required="" autofocus=""></asp:TextBox>
                 <br />
-              <label class="sr-only" for="inlineFormInputName">Nombre</label>
-              <div class="input-group">
-                    <asp:Label ID="Label2" runat="server" Text="Contraseña:"></asp:Label>
-                  &nbsp;<asp:TextBox ID="TextBox2" runat="server" CssClass="input-group" TextMode="Password"></asp:TextBox>
-              </div>
-                <br />
-                &nbsp;<br />
-                <asp:Button ID="Button1" runat="server" BackColor="#0066FF" ForeColor="White" Text="ACCEDER" Height="53px" Width="278px" OnClick="Button1_Click1" />
-                <br />
-              <p class="message">¿No estàs registrado? <a href="Default.aspx">Crear una cuenta</a></p>
-            </form>
-          </div>
-        </div>
+              <asp:Label id="Label2" runat="server" for="TextBox2" class="sr-only">Contraseña</asp:Label>
+              <asp:TextBox type="password" id="TextBox2" runat="server" class="form-control" placeholder="Contraseña" required=""></asp:TextBox>
+                <br /><br />
+        <asp:Button ID="Button2" runat="server" class="btn btn-lg btn-primary btn-block" Text="ACCEDER" OnClick="Button1_Click1" />
+     <br />
+      <p class="message">¿No estàs registrado? <a href="Default.aspx">Crear una cuenta</a></p>
+    </form>
+</div>
+</body>
+
+
  </asp:Content>

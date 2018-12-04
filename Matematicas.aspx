@@ -9,11 +9,14 @@
     <link rel="stylesheet" type="text/css" href="css/categories_responsive.css"/>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-    <div class="product_grid" style="float:right; padding-left: 500px; z-index:100">
-
-						<!-- Product -->
+    <div class="container float-right" style="width:1020px">
+    <div class="product_grid" style="z-index:100;">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+          						<!-- Product -->
 						<div class="product" id="p1" runat="server">
-							<div class="product_image"><img src="''"  alt="" runat="server" id="Product1"/></div>
+							<div class="product_image" style=" width:250px; height: 150px;"><img src="''"  alt="" runat="server" id="Product1" /></div>
 							<div class="rating rating_4" data-rating="4" runat="server" id="rating1">
 								<i class="fa fa-star"></i>
 								<i class="fa fa-star"></i>
@@ -30,11 +33,14 @@
 									<%--<div class="product_fav product_option">+</div>--%>
 								</div>
 							</div>
+                            </div>
 						</div>
-
-						<!-- Product -->
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+      <!-- Product -->
 						<div class="product"  id="p2" runat="server">
-							<div class="product_image"><img src="images/product_2.jpg" alt="" id="Product2" runat="server"/></div>
+							<div class="product_image"  style=" width:250px; height: 150px;"><img src="images/product_2.jpg" alt="" id="Product2" runat="server"/></div>
 							<div class="rating rating_5" data-rating="5" runat="server" id="rating2">
 								<i class="fa fa-star"></i>
 								<i class="fa fa-star"></i>
@@ -52,11 +58,13 @@
 									<%--<div class="product_fav product_option">+</div>--%>
 								</div>
 							</div>
-						</div>
-
-						<!-- Product -->
+						</div></div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+       <!-- Product -->
 						<div class="product"  id="p3" runat="server">
-							<div class="product_image"><img src="images/product_3.jpg" alt="" id="Product3" runat="server"/></div>
+							<div class="product_image"  style=" width:250px; height: 150px;"><img src="images/product_3.jpg" alt="" id="Product3" runat="server"/></div>
 							<div class="rating rating_3" data-rating="3" runat="server" id="rating3">
 								<i class="fa fa-star"></i>
 								<i class="fa fa-star"></i>
@@ -74,11 +82,14 @@
 									<div class="product_fav product_option">+</div>--%>
 								</div>
 							</div>
-						</div>
+						</div></div>
+            </div>
 
-						<!-- Product -->
+            <div class="col-md-4">
+              <div class="card mb-4 shadow-sm">
+                <!-- Product -->
 						<div class="product"  id="p4" runat="server">
-							<div class="product_image"><img src="images/product_4.jpg" alt="" id="Product4" runat="server"/></div>
+							<div class="product_image"  style=" width:250px; height: 150px;"><img src="images/product_4.jpg" alt="" id="Product4" runat="server"/></div>
 							<div class="rating rating_3" data-rating="3" runat="server" id="rating4">
 								<i class="fa fa-star"></i>
 								<i class="fa fa-star"></i>
@@ -97,10 +108,13 @@
 								</div>
 							</div>
 						</div>
-
-						<!-- Product -->
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card mb-4 shadow-sm">
+                <!-- Product -->
 						<div class="product"  id="p5" runat="server">
-							<div class="product_image"><img src="images/product_5.jpg" alt="" id="Product5" runat="server"/></div>
+							<div class="product_image"  style=" width:250px; height: 150px;"><img src="images/product_5.jpg" alt="" id="Product5" runat="server"/></div>
 							<div class="rating rating_3" data-rating="3" runat="server" id="rating5">
 								<i class="fa fa-star"></i>
 								<i class="fa fa-star"></i>
@@ -119,10 +133,13 @@
 								</div>
 							</div>
 						</div>
-
-						<!-- Product -->
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card mb-4 shadow-sm">
+                <!-- Product -->
 						<div class="product"  id="p6" runat="server">
-							<div class="product_image"><img src="imagenes/product_6.jpg" alt="" id="Product6" runat="server"/></div>
+							<div class="product_image" style=" width:250px; height: 150px;"><img src="imagenes/product_6.jpg" alt="" id="Product6" runat="server"/></div>
 							<div class="rating rating_3" data-rating="3" runat="server" id="rating6">
 								<i class="fa fa-star"></i>
 								<i class="fa fa-star"></i>
@@ -141,10 +158,14 @@
 								</div>
 							</div>
 						</div>
-
-						<!-- Product -->
+              </div>
+            </div>
+         
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+              <!-- Product -->
 						<div class="product"  id="p7" runat="server">
-							<div class="product_image"><img src="images/product_7.jpg" alt="" id="Product7" runat="server"/></div>
+							<div class="product_image" style=" width:250px; height: 150px;"><img src="images/product_7.jpg" alt="" id="Product7" runat="server"/></div>
 							<div class="rating rating_3" data-rating="3" runat="server" id="rating7">
 								<i class="fa fa-star"></i>
 								<i class="fa fa-star"></i>
@@ -163,10 +184,13 @@
 								</div>
 							</div>
 						</div>
-
-						<!-- Product -->
+            </div>
+                </div>
+            <div class="col-md-4">
+                 <div class="card mb-4 shadow-sm">
+              <!-- Product -->
 						<div class="product"  id="p8" runat="server">
-							<div class="product_image"><img src="images/product_8.jpg" alt="" id="Product8" runat="server"/></div>
+							<div class="product_image" style=" width:250px; height: 150px;"><img src="images/product_8.jpg" alt="" id="Product8" runat="server"/></div>
 							<div class="rating rating_3" data-rating="3" runat="server" id="rating8">
 								<i class="fa fa-star"></i>
 								<i class="fa fa-star"></i>
@@ -184,11 +208,14 @@
 									<div class="product_fav product_option">+</div>--%>
 								</div>
 							</div>
-						</div>
-
+						</div></div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+              
 						<!-- Product -->
 						<div class="product"  id="p9" runat="server">
-							<div class="product_image"><img src="images/product_9.jpg" alt="" id="Product9" runat="server"/></div>
+							<div class="product_image" style=" width:250px; height: 150px;"><img src="images/product_9.jpg" alt="" id="Product9" runat="server" /></div>
 							<div class="rating rating_3" data-rating="3" runat="server" id="rating9">
 								<i class="fa fa-star"></i>
 								<i class="fa fa-star"></i>
@@ -207,10 +234,15 @@
 								</div>
 							</div>
 						</div>
+                    </div>
+            </div>
+          </div>
+
+						
 
 						<!-- Product -->
 						<div class="product"  id="p10" runat="server">
-							<div class="product_image"><img src="images/product_10.jpg" alt="" id="Product10" runat="server"/></div>
+							<div class="product_image" style=" width:250px; height: 150px;"><img src="images/product_10.jpg" alt="" id="Product10" runat="server"/></div>
 							<div class="rating rating_3" data-rating="3" runat="server" id="rating10">
 								<i class="fa fa-star"></i>
 								<i class="fa fa-star"></i>
@@ -232,7 +264,7 @@
 
 						<!-- Product -->
 						<div class="product"  id="p11" runat="server">
-							<div class="product_image"><img src="images/product_11.jpg" alt="" id="Product11" runat="server"/></div>
+							<div class="product_image" style=" width:250px; height: 150px;"><img src="images/product_11.jpg" alt="" id="Product11" runat="server"/></div>
 							<div class="rating rating_3" data-rating="3" runat="server" id="rating11">
 								<i class="fa fa-star"></i>
 								<i class="fa fa-star"></i>
@@ -254,7 +286,7 @@
 
 						<!-- Product -->
 						<div class="product"  id="p12" runat="server">
-							<div class="product_image"><img src="images/product_12.jpg" alt="" id="Product12" runat="server"/></div>
+							<div class="product_image" style=" width:250px; height: 150px;"><img src="images/product_12.jpg" alt="" id="Product12" runat="server"/></div>
 							<div class="rating rating_3" data-rating="3" runat="server" id="rating12">
 								<i class="fa fa-star"></i>
 								<i class="fa fa-star"></i>
@@ -273,7 +305,7 @@
 								</div>
 							</div>
 						</div>
-
+                    </div>
 					</div>
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap4/popper.js"></script>
